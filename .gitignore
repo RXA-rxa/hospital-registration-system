@@ -1,0 +1,24 @@
+### IntelliJ IDEA ###
+.idea/
+*.iml
+out/
+target/
+
+### Eclipse ###
+.classpath
+.project
+.settings/
+bin/
+
+### Tomcat ###
+.smarttomcat/
+conf/
+logs/
+temp/
+
+### JAR 包（依赖请自行下载） ###
+*.jar
+
+### 系统文件 ###
+.DS_Store
+Thumbs.db

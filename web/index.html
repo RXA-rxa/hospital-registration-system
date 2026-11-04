@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>挂号系统 - 统一入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            font-family: "Microsoft YaHei", sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #2f5496;
+            margin-bottom: 30px;
+            font-size: 24px;
+            text-align: center;
+        }
+        .test-tip {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #666666;
+        }
+        /* 跳转按钮专属样式，和挂号系统风格一致 */
+        .jump-btn {
+            display: inline-block; /* 行内块元素，可设置宽高 */
+            width: 220px;
+            height: 45px;
+            line-height: 45px; /* 垂直居中文字 */
+            text-align: center;
+            background-color: #2f5496; /* 和挂号系统主色调一致 */
+            color: #ffffff;
+            text-decoration: none; /* 去除链接下划线 */
+            border-radius: 6px; /* 圆角样式，更美观 */
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.3s ease; /*  hover 过渡效果，更流畅 */
+            box-shadow: 0 2px 5px rgba(47, 84, 150, 0.2); /* 阴影效果，提升质感 */
+        }
+        .jump-btn:hover {
+            background-color: #234680; /* 深色hover效果，交互更友好 */
+            transform: translateY(-2px); /* 轻微上移，提升交互体验 */
+            box-shadow: 0 4px 8px rgba(47, 84, 150, 0.3);
+        }
+    </style>
+</head>
+<body>
+<h1>挂号系统基础入口</h1>
+<div class="test-tip">欢迎使用医院在线挂号系统，请点击下方按钮进入动态功能页面</div>
+
+<!-- 核心：跳转链接，指向同级的 index.jsp -->
+<a href="index.jsp" class="jump-btn">进入挂号系统</a>
+</body>
+</html>

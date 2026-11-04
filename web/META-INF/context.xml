@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+    <!-- MySQL 数据库连接池配置 -->
+    <Resource name="jdbc/MedicalDB"
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxTotal="100"
+              maxIdle="30"
+              maxWaitMillis="10000"
+              username="root"
+              password="123456"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/medical_system?useSSL=false&amp;serverTimezone=UTC&amp;characterEncoding=UTF-8"/>
+
+    <!-- 注释掉或删除PreResources配置 -->
+    <!--
+    <Resources className="org.apache.catalina.webresources.StandardRoot">
+        <PreResources className="org.apache.catalina.webresources.DirResourceSet"
+                      webAppMount="/WEB-INF/class"
+                      base="${catalina.base}/webapps/WEB-INF/class"/>
+    </Resources>
+    -->
+
+</Context>

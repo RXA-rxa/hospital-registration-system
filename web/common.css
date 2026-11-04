@@ -1,0 +1,166 @@
+/* common.css - 所有页面共享的通用样式 */
+:root {
+    --primary-color: #1a73e8;
+    --primary-light: #4a9eff;
+    --primary-dark: #0d47a1;
+    --secondary-color: #34a853;
+    --accent-color: #fbbc04;
+    --light-bg: #f8fafc;
+    --white: #ffffff;
+    --text-dark: #2c3e50;
+    --text-light: #7b8793;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.12);
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* 波浪背景 */
+.wave-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(120deg, #e0f2ff 0%, #f0f9ff 100%);
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSIyMDAiIHZpZXdCb3g9IjAgMCAxMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIwMCAwSDB2MTUwYzIwMCAwIDQwMC0xMDAgNjAwLTEwMHM2MDAgMTAwIDYwMCAxMDBWMHoiIGZpbGw9IiMxYTczZTgiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+') repeat-x;
+    animation: waveMove 25s linear infinite;
+}
+
+.wave:nth-child(2) {
+    animation-duration: 20s;
+    opacity: 0.5;
+    bottom: 20px;
+}
+
+.wave:nth-child(3) {
+    animation-duration: 15s;
+    opacity: 0.3;
+    bottom: 40px;
+}
+
+@keyframes waveMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* 卡片样式 */
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-light);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-medium);
+}
+
+/* 按钮样式 */
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(26, 115, 232, 0.3);
+}
+
+/* 导航栏样式 */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(26, 115, 232, 0.1);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 24px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand i {
+    color: var(--primary-color);
+}
+
+/* 图标容器 */
+.icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 20px rgba(26, 115, 232, 0.2);
+}
+
+.icon-container i {
+    font-size: 28px;
+    color: white;
+}
+
+/* 表单样式 */
+.form-control {
+    border: 2px solid #e0e7ff;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.1);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .card {
+        margin: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem !important;
+    }
+}
